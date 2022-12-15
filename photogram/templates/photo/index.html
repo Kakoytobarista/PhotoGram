@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+{% include 'photo/includes/filters.html' %}
+<div class="col-md-14 p-5">
+  <div class="container align-self-center">
+    {% for photo in photos %}
+    {% include 'photo/includes/photo_list.html' %}
+    {% if photo.author == request.user %}
+        <li class="post_opportunities">
+    <a class="btn btn-outline-dark" href="{% url 'photo:photo_detail' photo.id %}">Detail</a>
+    <a class="btn btn-outline-dark" href="{% url 'photo:photo_delete' photo.id %}">Delete</a>
+        </li>
+        <style>
+  .post_opportunities {
+    list-style-type: none;
+   }
+        </style>
+    {% else %}
+    <a class="btn btn-outline-dark" href="{% url 'photo:photo_detail' photo.id %}">Detail</a>
+    {% endif %}
+      {% if not forloop.last %} <hr>  {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<script type="module" src="{% static  'js/main.js' %}"></script>
+
+{% include 'photo/includes/paginator.html' %}
+{% endblock %}

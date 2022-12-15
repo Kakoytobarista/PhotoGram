@@ -1,0 +1,64 @@
+<form method="GET" action="." class="col-md-14 p-5 needs-validation container align-self-center" novalidate>
+    <h3>Filters:</h3>
+    <hr>
+    <div class="form-row container">
+        <div class="col-md-6 mb-3 autocomplete">
+            <label for="validationTooltip02">Peoples on photo</label>
+            <input autocomplete="off" type="text" name="people_on_photo" class="form-control" id="validationTooltip01"
+                   placeholder="People on photo"
+                   required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip08">Id of photo</label>
+            <input autocomplete="off" type="text" name="id" class="form-control" id="validationTooltip08"
+                   placeholder="id"
+                   required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip02">Date</label>
+            <input type="date" name="date" class="form-control" id="validationTooltip02" placeholder="Date"
+                   required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip02">Location</label>
+            <input type="text" name="location" class="form-control" id="validationTooltip03" placeholder="Location"
+                   required>
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltipUsername">Author</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                </div>
+                <input type="text" name="author" class="form-control" id="validationTooltipUsername"
+                       placeholder="Username"
+                       aria-describedby="validationTooltipUsernamePrepend" required>
+                <div class="invalid-tooltip">
+                    Please choose a unique and valid username.
+                </div>
+            </div>
+        </div>
+        <div class="text-center fa-text-width"">
+            <button class="btn btn-light btn-lg btn-block" type="submit">Apply</button>
+            {% if request.GET %}
+            <a type="button" href="{%  url 'photo:index' %}" class="btn btn-light btn-lg btn-block">Clear</a>
+            {% endif %}
+        </div>
+    </div>
+    <hr>
+</form>
+<hr>

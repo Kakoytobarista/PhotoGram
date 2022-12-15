@@ -1,0 +1,81 @@
+#text-detail-post {
+    margin-top: 30px;
+}
+
+.card-header {
+    text-align: center;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+
+.navbar-brand {
+    padding-left: 30px;
+}
+
+
+
+#bottom_buttons_div{
+    text-align: center;
+    margin-left: 20px;
+  }
+
+
+li {
+  list-style-type: none;
+  /* Убираем маркеры */
+}
+
+
+/*Autocomplete*/
+
+input[type=hide] {
+  background-color: #f1f1f1;
+  width: 100%;
+  border: 1px solid transparent;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.autocomplete-items {
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

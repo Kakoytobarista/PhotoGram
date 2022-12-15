@@ -1,0 +1,21 @@
+{% load thumbnail %}
+<article>
+  <ul>
+    <li>
+      <h5 style="
+font-family: 'Ubuntu', sans-serif;
+      width: 26%;
+      padding: 10px 10px 10px 10px;
+  ">
+    Author: {{ photo.author.get_full_name }}
+      </h5>
+    </li>
+  </ul>
+  <p>
+    <a href="{% url 'photo:photo_detail' photo.id %}">
+    {% thumbnail photo.image "960x339" crop="center" upscale=True as im %}
+        <img class="card-img my-2" src="{{ im.url }}">
+    {% endthumbnail %}
+    </a>
+  </p>
+</article>
