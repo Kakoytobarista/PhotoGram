@@ -42,9 +42,11 @@ _______
 #### All data inside, so you need just start project.
 
 Some things:
-{I didn't have time to do a better implementation of 
-autocomplete, but I decided to describe it here. In general, 
-to optimize the database, it makes sense to make one query, 
+### I didn't have time to do a better implementation of autocomplete, but I decided to describe it here. 
+In general, to optimize the database, it makes sense to make one query, 
 cache it and push it into the NoSQL database, and from there 
 add the field to the autocomplete. This will reduce the load 
-on the database and is easy to implement since key value db.}
+on the database and is easy to implement since key value db.
+
+PS: transactions in app for transactions, just for 
+make you sure that I know what is it transactions in db.
