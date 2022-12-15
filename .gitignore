@@ -1,0 +1,14 @@
+# Environment
+
+/venv
+
+
+# IDEA
+
+/.idea/
+photogram/core/context_processors/__pycache__/
+photogram/api/__pycache__/
+photogram/core/__pycache__/
+photogram/core/templatetags/__pycache__/
+photogram/photo/__pycache__/
+photogram/users/__pycache__/
