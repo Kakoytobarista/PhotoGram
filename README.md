@@ -8,7 +8,7 @@ Python==3.8, Django==3.1.7, djangorestframework==3.14.0, HTML/CSS/JS, SqLite, Fi
 Docker.
 
 ### How to run project:
-#### Install Docker the first if you are don't have.
+#### Install Docker the first if you are don't have, and run it.
 1. Give permissions to bash file
 ```
 chmod u+x start_project.bash
