@@ -10,7 +10,6 @@
     {% include 'photo/includes/photo_list.html' %}
     {% if photo.author == request.user %}
         <li class="post_opportunities">
-    <a class="btn btn-outline-dark" href="{% url 'photo:photo_detail' photo.id %}">Detail</a>
     <a class="btn btn-outline-dark" href="{% url 'photo:photo_delete' photo.id %}">Delete</a>
         </li>
         <style>
@@ -18,8 +17,6 @@
     list-style-type: none;
    }
         </style>
-    {% else %}
-    <a class="btn btn-outline-dark" href="{% url 'photo:photo_detail' photo.id %}">Detail</a>
     {% endif %}
       {% if not forloop.last %} <hr>  {% endif %}
     {% endfor %}
