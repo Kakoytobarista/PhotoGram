@@ -14,7 +14,7 @@ TEMPLATE_DEBUG = DEBUG
 if DEBUG is False:
     ALLOWED_HOSTS = [
         'localhost',
-        '127.0.0.1',
+        '127.0.0.1:8000',
         '[::1]',
         'testserver',
         '*',
@@ -22,8 +22,9 @@ if DEBUG is False:
     ]
 
 if DEBUG is True:
-    ALLOWED_HOSTS = ['0.0.0.0:8000',
-                     '0.0.0.0', ]
+    ALLOWED_HOSTS = ['0.0.0.0',
+                     '127.0.0.1'
+                     ]
 
 
 INSTALLED_APPS = [

@@ -5,6 +5,7 @@
 
 # IDEA
 
+
 /.idea/
 photogram/core/context_processors/__pycache__/
 photogram/api/__pycache__/
@@ -15,3 +16,4 @@ photogram/users/__pycache__/
 
 # CAHCE
 photogram/media/cache
+photogram/__pycache__/

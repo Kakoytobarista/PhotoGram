@@ -32,7 +32,6 @@ class IndexView(ListView):
         context = super().get_context_data(**kwargs)
         queryset = self.get_queryset()
         context['photos'] = queryset
-        print(context)
         return context
 
 
