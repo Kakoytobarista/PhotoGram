@@ -9,11 +9,7 @@ Docker.
 
 ### How to run project:
 #### Install Docker the first if you are don't have, and run it.
-1. Give permissions to bash file
-```
-chmod u+x start_project.bash
-```
-2. Run bash file with docker:
+1. Run bash file with docker:
 ```
 ./start_project.bash
 ```
