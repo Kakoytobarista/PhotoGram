@@ -12,7 +12,7 @@
       {% for i in page_obj.paginator.page_range %}
     {% if page_obj.number == i %}
     <li class="page-item active">
-      <span class="page-link">{{ i }}</span>
+      <span class="page-link color">{{ i }}</span>
     </li>
     {% else %}
     <li class="page-item">

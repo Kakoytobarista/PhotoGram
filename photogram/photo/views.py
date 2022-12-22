@@ -1,4 +1,4 @@
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse
 from django.db import transaction
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
@@ -17,6 +17,7 @@ from core.filters import PhotoFilters
 class IndexView(ListView):
     model = Photo
     template_name = 'photo/index.html'
+    paginate_by = 2
 
     @method_decorator(transaction.atomic)
     def dispatch(self, *args, **kwargs):
@@ -31,6 +32,7 @@ class IndexView(ListView):
         context = super().get_context_data(**kwargs)
         queryset = self.get_queryset()
         context['photos'] = queryset
+        print(context)
         return context
 
 
@@ -84,10 +86,6 @@ class PhotoDeleteView(DeleteView, LoginRequiredMixin):
     @method_decorator(transaction.atomic)
     def dispatch(self, *args, **kwargs):
         return super(PhotoDeleteView, self).dispatch(*args, **kwargs)
-
-    def get_success_url(self):
-        success_url = str(reverse_lazy('photo:index'))
-        return success_url
 
     def get(self, request, *args, **kwargs):
         return self.delete(request, *args, **kwargs)

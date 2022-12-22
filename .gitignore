@@ -12,3 +12,6 @@ photogram/core/__pycache__/
 photogram/core/templatetags/__pycache__/
 photogram/photo/__pycache__/
 photogram/users/__pycache__/
+
+# CAHCE
+photogram/media/cache
